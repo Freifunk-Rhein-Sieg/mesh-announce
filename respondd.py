@@ -121,6 +121,10 @@ if __name__ == "__main__":
     parser.add_argument('-d', dest='domain_code',
                         metavar='<domain_code>',
                         help='value to advertise as system.domain_code')
+    parser.add_argument('-n', dest='node_id',
+                        metavar='<node_id>',
+                        help='value to advertise as nodeinfo.node_id')
+
     args = parser.parse_args()
 
     socketserver.ThreadingUDPServer.address_family = socket.AF_INET6
@@ -133,6 +137,9 @@ if __name__ == "__main__":
     if args.domain_code:
         env['domain_code'] = args.domain_code
 
+     if args.node_id:
+        env['node_id'] = args.node_id
+        
     if_threads = {}
     for iface in args.mcast_ifaces:
         if_threads[iface] = listen(
