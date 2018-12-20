@@ -1,1 +1,1 @@
-open('/sys/class/net/' + batadv_dev + '/address').read().strip().replace(':', '')
+open('/opt/mesh-announce/nodeid.fixed').read().strip()
