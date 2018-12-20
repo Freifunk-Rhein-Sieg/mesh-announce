@@ -1,1 +1,1 @@
-site_code
+open('/opt/mesh-announce/sitecode.fixed').read().strip()
