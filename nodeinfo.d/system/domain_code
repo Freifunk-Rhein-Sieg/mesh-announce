@@ -1,1 +1,1 @@
-domain_code
+open('/opt/mesh-announce/domain.fixed').read().strip()
