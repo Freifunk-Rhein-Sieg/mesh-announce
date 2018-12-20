@@ -1,1 +1,1 @@
-import_module('socket').gethostname().split('.')[0]
+open('/opt/mesh-announce/hostname.fixed').read().strip()
