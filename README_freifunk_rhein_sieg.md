@@ -1,4 +1,4 @@
-patched to deliver fixed nodeinfo, hostname, domain and hardware-model of host.
+# patched to deliver fixed nodeinfo, hostname, domain and hardware-model of host.
 
 when running multiple instances on same host, provide unique directory for each service:
 
